@@ -1,16 +1,21 @@
 .gridContainer {
   display: flex;
   flex-wrap: wrap;
+  width: 700px;
+  height: 700px;
+  // align-items: flex-start;
   
 }
 
 .box {
-  border: 1px solid blue;
-  min-height: 20px;
-  min-width: 20px;
+  // border: 1px solid blue;
+  display: inline-block;
+  background: teal;
+  // min-width: 30px;
+  flex: 1 0;
 }
 
 .boxHovered {
-  // border-color: yellow;
+  border-color: yellow;
   background-color: yellow;
 }
