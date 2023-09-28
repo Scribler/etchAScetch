@@ -18,7 +18,6 @@ function createGrid (gridSize) {
       pixelBox.style.minWidth = `${boxDimension}px`;
       pixelBox.addEventListener('mouseover', (event) => {event.target.classList.add('boxHovered')});
       etchascetchContainer.appendChild(pixelBox);
-      // if (i == 20) i++;
     };
     body.appendChild(etchascetchContainer);
   };
