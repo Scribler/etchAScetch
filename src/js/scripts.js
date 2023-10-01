@@ -58,18 +58,68 @@ let key = prompt("What do you want to know about the zzr600. engineSize, color, 
 console.log(myZzr600[key]);
 
 
+function createBike (brand, modelName, givenName, engineSize, color, wetWeightLb, dryWeightLb, wetWeightKg, dryWeightKg) {
+  return {
+    brand,
+    modelName,
+    givenName,
+    engineSize,
+    color,
+    wetWeightLb,
+    dryWeightLb,
+    wetWeightKg,
+    dryWeightKg,
+    "+12": "this should print",
+    
+    // below are long form way of writing.
+
+    // brand: brand,
+    // modelName: modelName,
+    // givenName: givenName,
+    // engineSize: engineSize,
+    // color: color,
+    // wetWeightKg: wetWeightKg,
+    // dryWeightKg: dryWeightKg,
+    // wetWeightLb: wetWeightLb,
+    // dryWeightLb: dryWeightLb,
+  };
+};
+
+const myBike = createBike("Kawasaki", "ZZR600", "Gin Chan", 599, "Silver", 487.222, 376.99, 221, 171);
+
+console.log(`My motorcycle's Brand: ${myBike.brand}`);
+console.log(`My motorcycle's Model Name: ${myBike.modelName}`);
+console.log(`My motorcycle's Given Name: ${myBike.givenName}`);
+console.log(`My motorcycle's Engine Size: ${myBike.engineSize}`);
+console.log(`My motorcycle's Color: ${myBike.color}`);
+console.log(`My motorcycle's Wet Weight In Pounds: ${myBike.wetWeightLb} lbs`);
+console.log(`My motorcycle's Dry Weight In Pounds: ${myBike.dryWeightLb} lbs`);
+console.log(`My motorcycle's Wet Weight In Kilo's: ${myBike.wetWeightKg} kg`);
+console.log(`My motorcycle's Dry Weight In Kilo's: ${myBike.dryWeightKg} kg`);
+
+console.log(`Does my bike have a 'seat style'?: ${"seatStyle" in myBike}`);
+console.log(`Does my bike have a 'Dry Weight in KG'?: ${"dryWeightKg" in myBike}`);
+
+function lbsOrKg (key) {
+  if (key.includes("Lb")) {
+    return " lbs";
+  } else if (key.includes("Kg")) {
+    return " kgs";
+  } else {
+    return "";
+  }
+}
 
 
+console.log(" ");
+for (key in myBike) {
+  console.log(`The motorcycle's ${key.toUpperCase()}: ${myBike[key]}${lbsOrKg(key)}`);
+}
+console.log(" ");
+let testingg = 12;
+console.log( +testingg );
 
-
-
-
-
-
-
-
-
-
+console.log(myBike[`+${testingg}`]);
 
 
 
