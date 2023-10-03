@@ -91,12 +91,14 @@ console.table(oldestToYoungest);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
-const added = inventors.reduce((total, inventor) => {
+function addAllAges ( total, inventor ) {
   return total + (inventor.passed - inventor.year);
-}, 0);
-console.log(added);
+};
+console.log(inventors.reduce( addAllAges, 0 )); // '0' is the initial value.  Otherwise it tries to add to Nan and will always return a weird object thing. 
 
 // 5. Sort the inventors by years lived
+console.log("Do this one next! >> sort inventors by years lived");
+
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
